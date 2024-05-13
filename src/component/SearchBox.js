@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./searchBoxCSS.css"
 
 const SearchBox = ({ onSearch }) => {
   const [query, setQuery] = useState('');
@@ -14,14 +15,15 @@ const SearchBox = ({ onSearch }) => {
   };
 
   return (
+    
+
     <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={query}
+    <div class="search">
+                          <input type="text" class="form-control" value={query}
         onChange={handleChange}
-        placeholder="Search for a ship or port..."
-      />
-      <button type="submit">Search</button>
+        placeholder="Search for a ship or port..." />
+                          <button type='submit' class="btn btn-primary">Search</button>
+                        </div>
     </form>
   );
 };
